@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Doddamani | Data Portfolio</title>
+    <style>
+        :root {
+            --bg-dark: #020408;
+            --neon-blue: #00d4ff;
+            --deep-blue: #005f73;
+            --text-dim: #8892b0;
+            --terminal-bg: rgba(5, 10, 20, 0.9);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e6f1ff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Image/Code Background */
+        .hero-bg-code {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(2,4,8,0.5), var(--bg-dark)),
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        header {
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .glitch {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        /* Terminal Call to Action */
+        .terminal-box {
+            max-width: 600px;
+            margin: 0 auto 50px;
+            background: var(--terminal-bg);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .terminal-header { background: var(--deep-blue); padding: 5px 12px; font-size: 0.75rem; }
+        .terminal-body { padding: 15px; color: var(--neon-blue); }
+        .input-area { display: flex; align-items: center; gap: 10px; }
+        #resume-input { background: transparent; border: none; color: #fff; outline: none; width: 100%; font-family: 'Courier New', monospace; }
+
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .section-title { color: var(--neon-blue); border-bottom: 1px solid var(--deep-blue); text-transform: uppercase; margin-top: 50px; letter-spacing: 2px; }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: rgba(10, 25, 47, 0.4);
+            border: 1px solid #1a1a1a;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .skill-category h3 { color: var(--neon-blue); margin-top: 0; font-size: 1rem; border-bottom: 1px solid #1a1a1a; padding-bottom: 10px; }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            margin: 5px 3px;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        /* Project Cards */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { 
+            background: rgba(10, 25, 47, 0.6); 
+            border: 1px solid var(--deep-blue); 
+            padding: 25px; 
+            transition: 0.4s; 
+            position: relative;
+        }
+        .card:hover { border-color: var(--neon-blue); transform: scale(1.02); box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); }
+        
+        .card-header { font-size: 0.7rem; color: var(--text-dim); margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="hero-bg-code"></div>
+
+<header>
+    <h1 class="glitch">SANJAY DODDAMANI</h1>
+    <p style="color: var(--text-dim)">DATA ANALYST // WEB ARCHITECT // GEN-AI OPTIMIZER</p>
+    <p style="color: var(--neon-blue); font-size: 0.8rem;">[BCA GRADUATE | 8.52 CGPA]</p>
+</header>
+
+<div class="terminal-box">
+    <div class="terminal-header">ACCESS_POINT: DOWNLOAD_SERVER</div>
+    <div class="terminal-body">
+        <div id="terminal-msg">SYSTEM READY. Type 'get resume' to proceed...</div>
+        <div class="input-area">
+            <span>></span>
+            <input type="text" id="resume-input" autofocus autocomplete="off">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <section id="skills">
+        <h2 class="section-title">01. Technical Arsenal</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Data Analysis</h3>
+                <span class="tag">SQL</span> <span class="tag">Python</span> 
+                <span class="tag">Power BI</span> <span class="tag">Tableau</span> 
+                <span class="tag">Excel (VBA/Pivot)</span> 
+            </div>
+            <div class="skill-category">
+                <h3>Gen-AI & Automation</h3>
+                <span class="tag">Prompt Engineering</span> <span class="tag">LLM Optimization</span> 
+                <span class="tag">AI-Assisted Coding</span> <span class="tag">ETL Automation</span>
+            </div>
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <span class="tag">Django</span> <span class="tag">JavaScript</span>
+                <span class="tag">HTML/CSS</span> <span class="tag">AWS (Foundational)</span>
+                
+            </div>
+            <div class="skill-category">
+                <h3>Methodologies</h3>
+                <span class="tag">Agile/Scrum</span> <span class="tag">SDLC</span> 
+                <span class="tag">Statistical Modeling</span> <span class="tag">Data Governance</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">02. Mission Logs</h2>
+        <div class="project-grid">
+            <div class="card">
+                <div class="card-header">FILE: HR_ANALYTICS.PBI</div>
+                <h3>Retention Analysis Dashboard</h3>
+                <p>Interactive Power BI dashboard identifying turnover drivers and employee conditions across departments.</p>
+                <span class="tag">Power BI</span> <span class="tag">Statistical Analysis</span>
+            </div>
+            <div class="card">
+                <div class="card-header">FILE: ECOM_PET.MERN</div>
+                <h3>Pet Services Ecosystem</h3>
+                <p>Full-stack marketplace featuring secure auth and dynamic catalogs. Built using Agile sprints.</p>
+                <span class="tag">MongoDB</span> <span class="tag">Express</span> <span class="tag">React</span>
+            </div>
+            <div class="card">
+                <div class="card-header">FILE: TAXI_VOICE.PY</div>
+                <h3>Voice-Response Taxi Portal</h3>
+                <p>Django application with an integrated AI voice-command weather reporting system.</p>
+                <span class="tag">Python</span> <span class="tag">Django</span> <span class="tag">API Integration</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">03. Professional History</h2>
+        <div class="card" style="width: 100%;">
+            <div class="card-header">ROLE: WEB_DESIGNER // COMPANY: TRAVELPACK</div>
+            <p><strong>Impact:</strong> Transformed marketing performance by generating weekly interaction reports via Excel and Python. Managed end-to-end web assets for global airline campaigns.</p>
+            <p><strong>Tech:</strong> Mailchimp, Dotdigital, WIX, SQL, HTML/CSS.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; color: var(--deep-blue); font-size: 0.7rem; letter-spacing: 2px;">
+    &copy; 2026 SANJAY_DODDAMANI // ENCRYPTED_CONNECTION_STABLE
+</footer>
+
+<script>
+    const input = document.getElementById('resume-input');
+    const msg = document.getElementById('terminal-msg');
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const val = input.value.toLowerCase().trim();
+            if (val === 'get resume') {
+                msg.innerHTML = '<span style="color: #00ff00">DECRYPTING... DOWNLOAD INITIATED.</span>';
+                window.open('Sanjay_Doddamani_.pdf', '_blank'); 
+            } else {
+                msg.innerHTML = '<span style="color: #ff4d4d">ERROR: UNAUTHORIZED COMMAND.</span>';
+            }
+            input.value = '';
+        }
+    });
+</script>
+
+</body>
+</html>
