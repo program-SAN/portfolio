@@ -151,6 +151,10 @@
             font-size: 1rem;
         }
 
+.btn-download:hover {
+    background: #ffe045;
+}
+
         .btn-download:active {
             box-shadow: 0 0 0 #000;
             transform: translate(6px, 6px);
@@ -267,7 +271,9 @@
         </div>
     </section>
 
-    <a class="btn-download"><button onclick="openResume()" > View Resume</button></a>
+<button id="resumeBtn" class="btn-download" onclick="openResume()">
+    VIEW RESUME
+</button>
     <div class="pipe"></div>
 </div>
 
@@ -281,8 +287,23 @@
 
 <script>
 function openResume() {
-    // Ensure this matches your exact filename in your project folder
-    const resumeUrl = 'Sanjay-Doddamani-Resume-2026.pdf'; [cite, 1]
-    window.open(resumeUrl, '_blank');
+    const btn = document.getElementById('resumeBtn');
+    const originalText = btn.innerHTML;
+    
+    // 1. Change text to show "Loading" state
+    btn.innerHTML = "LOADING...";
+    btn.style.background = "#fff"; // Flash white like a hit block
+
+    // 2. Wait 1 second (1000ms)
+    setTimeout(() => {
+        // IMPORTANT: Ensure this file name is EXACTLY correct in your folder
+        const resumeUrl = 'Sanjay-Doddamani-Resume-2026.pdf'; 
+        
+        window.open(resumeUrl, '_blank');
+
+        // 3. Reset the button text
+        btn.innerHTML = originalText;
+        btn.style.background = ""; // Returns to CSS default
+    }, 1000);
 }
 </script>
